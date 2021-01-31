@@ -11,7 +11,7 @@
 -----
 ## 2. 구현 방법
 **1) 추상 클래스**
-```
+```java
 public abstract class AbstractSort {
 
 	public static void sort(Comparable[] a) {
@@ -51,7 +51,7 @@ public abstract class AbstractSort {
 ㆍ 각각의 정렬 알고리즘들이 상속받을 추상클래스를 구현하였다.   
 
 **2) 선택 정렬**
-```
+```java
 public class Selection extends AbstractSort {
 	public static void sort(Comparable[] a) {
 		int N = a.length;
@@ -71,7 +71,7 @@ public class Selection extends AbstractSort {
 ㆍ 그리고 현재 위치를 다음으로 이동하면서 앞에 과정을 반복해나가는 방식이다.
 
 **3) 삽입 정렬**
-```
+```java
 public class Insertion extends AbstractSort {
 	public static void sort(Comparable[] a) {
 		int N = a.length;
@@ -88,7 +88,7 @@ public class Insertion extends AbstractSort {
 ㆍ i를 n-1까지 증가하면서 위 과정을 반복한다.  
 
 **4) 쉘 정렬**
-```
+```java
 public class Shell extends AbstractSort {
 	public static void sort(Comparable[] a) {
 		int N = a.length;
@@ -111,7 +111,7 @@ public class Shell extends AbstractSort {
 ㆍ 이후 hr-1부터 h1까지 h를 줄이면서 삽입 정렬을 하는 방식이다.  
 
 **5) 계수 정렬**
-```
+```java
 public class Counting {
 	public static int[] sort(int[] A, int K) {
 		int i, N = A.length;
@@ -137,7 +137,7 @@ public class Counting {
 ㆍ 계수 정렬이 동작하는 과정은 위 사진과 같다.   
    
 **6) 기수 정렬**
-```
+```java
 public class Radix {
 	public static void sort(int[] A) {
 		int i, m = A[0];
@@ -172,7 +172,7 @@ public class Radix {
 ㆍ 낮은 자리수의 정렬이 끝나면 높은 자리수 순서대로 위 과정을 반복한다.   
 
 **7) 병합 정렬 (Top-Down)**
-```
+```java
 public class MergeTD extends AbstractSort {
 	private static void merge(Comparable[] a, Comparable[] aux, int low, int middle, int high) {
 
@@ -220,7 +220,7 @@ public class MergeTD extends AbstractSort {
 ㆍ Top-Down 병합 정렬의 동작 과정은 위 사진과 같다.   
 
 **8) 병합 정렬 (Bottom-Up)**
-```
+```java
 public class MergeBU extends AbstractSort {
 	private static void merge(Comparable[] in, Comparable[] out, int low, int middle, int high) {
 		int i = low;
